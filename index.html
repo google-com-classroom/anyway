@@ -22,49 +22,6 @@
 <div id="unity-warning"> </div>
 </div>
 <script>
-
-    var lb;
-
-    function initLib() {
-      ysdk.getLeaderboards()
-      .then(_lb => lb = _lb);
-    }
-
-    var payments = null;
-
-    function initPayments(){
-
-      ysdk.getPayments({ signed: true }).then(_payments => {
-                // Покупки доступны.
-        payments = _payments;
-      }).catch(err => {
-                // Покупки недоступны. Включите монетизацию в консоли разработчика.
-                // Убедитесь, что на вкладке Покупки консоли разработчика присутствует таблица
-                // хотя бы с одним внутриигровым товаром и надписью «Покупки разрешены».
-      })
-    }
-
-    var player = null;
-
-    function initPlayer() {
-      ysdk.getPlayer({ scopes: false }).then(_player => {
-        player = _player;
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-        console.log('Player data initialized');
-      }).catch(err => {
-                // Ошибка при инициализации объекта Player.
-      });
-    }
-
-  </script>
-<script>
     var container = document.querySelector("#unity-container");
     var canvas = document.querySelector("#unity-canvas");
     var loadingBar = document.querySelector("#unity-loading-bar");
