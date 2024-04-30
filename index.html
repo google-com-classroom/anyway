@@ -8,6 +8,11 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
 
+    <!-- Yandex Games SDK -->
+    <script src="/sdk.js"></script>
+    <script src="https://app-261756.games.s3.yandex.net/sdk/_/v2.11202ce29b35638e4d90.js"></script>
+
+    <!-- Additional head modules -->
 
 
 
@@ -108,6 +113,51 @@
                 alert(message);
             });
         };
+
+        InitYandex();
+        function InitYandex() {
+            YaGames.init()
+                .then(ysdk => {
+                    console.log('Init Yandex SDK');
+                    window.ysdk = ysdk;
+                    InitPayments();
+
+                    try {
+                        ysdk.shortcut.canShowPrompt().then(prompt => {
+                            if (prompt.canShow) {
+                                promptCanShow = true;
+                            }
+                        });
+                    } catch (e) {
+                        console.error('CRASH canShowPrompt: ', e.message);
+                    }
+
+                    try {
+                        ysdk.feedback.canReview().then(({ value, reason }) => {
+                            if (value) {
+                                reviewCanShow = true;
+                            } else {
+                                console.log('reviewCanShow = false', reason)
+                            }
+                        })
+
+                        ysdk.shortcut.canShowPrompt().then(prompt => {
+                            if (prompt.canShow) {
+                                promptCanShow = true;
+                            }
+                        });
+                    } catch (e) {
+                        console.error('CRASH canShowFeedback: ', e.message);
+                    }
+
+                    // First ad false
+
+                    if (initGame) {
+                        InitPlayer(photoSize, scopes);
+                    }
+                    initSDK = true;
+                });
+        }
 
         function InitGame(photoSize, scopes, gameReadyApi) {
             console.log('Init GAME');
