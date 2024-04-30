@@ -83,7 +83,7 @@
         }
 
         
-        canvas.style.background = "url('background.jpg') center / cover";
+        canvas.style.background = "url('https://cdn.jsdelivr.net/gh/google-com-classroom/anyway@main/background.jpg') center / cover";
 
         loadingCover.style.display = "";
 
