@@ -9,12 +9,11 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Fall Guys Ultimate Knockout</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <title>google.com</title>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/google-com-classroom/anyway@main/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/google-com-classroom/anyway@main/TemplateData/style.css">
 
     <!-- Yandex Games SDK -->
-    <script src="/sdk.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/google-com-classroom/anyway@main/v2.11202ce29b35638e4d90.js"></script>
 
     <!-- Additional head modules -->
@@ -29,7 +28,7 @@
     </div>
     <div id="loading-cover" style="display:none;">
         <div id="unity-loading-bar">
-            <div id="unity-logo"><img src="logo.png"></div>
+            <div id="unity-logo"><img src="https://cdn.jsdelivr.net/gh/google-com-classroom/anyway@main/logo.png"></div>
             <div id="unity-progress-bar-empty" style="display: none;">
                 <div id="unity-progress-bar-full"></div>
             </div>
